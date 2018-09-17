@@ -4,7 +4,7 @@ import Upload from './components/Upload';
 import Display from './components/Display';
 import Callback from './components/Callback';
 import registerServiceWorker from './registerServiceWorker';
-import { Router, Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { requireAuth } from './utils/AuthService';
 
 const Root = () => {
