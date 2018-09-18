@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import { isLoggedIn } from '../utils/AuthService';
+import { Share } from 'react-twitter-widgets';
 import { CloudinaryContext, Transformation, Video } from 'cloudinary-react';
 import axios from 'axios';
 
@@ -41,7 +42,7 @@ class Display extends Component {
                     <Video publicId={data.public_id} width="300" height="300" controls></Video>
                   </div>
                   <div> Created at {data.created_at} </div>
-
+                  <Share url={`http://res.cloudinary.com/unicodeveloper/video/upload/${data.public_id}.mp4`} />
                 </div>
               ))
             }
